@@ -1,6 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import React from "react";
 import { motion } from "framer-motion";
+const projects = useProjects();
 
 export const projects = [
   {
@@ -27,7 +28,7 @@ export const projects = [
     stack:
       "JAVASCRIPT | REACT | FRAMER MOTION | TAILWIND CSS | VITE",
     image: "/Portfolio.png",
-    link: "https://github.com/omnikam2810-oss/Outlaw",
+    link: "https://omkarnikams-portfolio.netlify.app/",
   },
   {
     title: "",
