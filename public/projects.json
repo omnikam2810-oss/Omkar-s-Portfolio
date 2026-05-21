@@ -3,14 +3,14 @@
     "title": "RepoLens - AI-Powered GitHub Repository Analyzer",
     "description":
       "Everything an engineering team needs to understand a codebase faster.",
-    "image": "/RepoLens.png",
+    "image": "/RepoLens1.png",
     "stack":
       "REACTJS | NODEJS | EXPRESSJS | TAILWIND CSS | VITE",
     "link": "https://repo-lens-zeta.vercel.app/"
   },
   {
     "title": "DesignSync",
-    "description": "A clean control centre for design delivery. DesignSync is a design handoff tool that streamlines the process of delivering design assets and specifications to development teams, ensuring a smooth transition from design to code.",
+    "description": "DesignSync is a streamlined design handoff platform that simplifies delivering design assets and specifications from designers to developers.",
     "image": "/DesignSync.png",
     "stack":
       "REACT | NODEJS | EXPRESS | TAILWIND CSS | MONGODB | CLODINARY | VITE | SOCKET.IO",
@@ -19,7 +19,7 @@
    {
     "title": "3D DEVELOPERS PORTFOLIO",
     "description":
-      "Built a fully responsive 3D portfolio website featuring interactive animations, smooth camera transitions, dynamic project showcases, and optimized performance to create an engaging user experience while highlighting technical projects and skills.",
+      "Built a responsive 3D portfolio website with interactive animations, smooth transitions, dynamic project showcases, and optimized performance for an engaging user experience.",
     "stack":
       "JAVASCRIPT | REACT | FRAMER MOTION | TAILWIND CSS | VITE",
     "image": "/Portfolio.png",
