@@ -123,7 +123,7 @@ const AboutPage = () => {
                   <FaLinkedin size={20} />
                 </a>
                 <a
-                  href="https://twitter.com/"
+                  href="mailto:omkarnikam2810@gmail.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-400 hover:text-blue-600 transition"

@@ -1,47 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import React from "react";
 import { motion } from "framer-motion";
-const projects = useProjects();
-
-export const projects = [
-  {
-    title: "RepoLens - AI-Powered GitHub Repository Analyzer",
-    description:
-      "Everything an engineering team needs to understand a codebase faster.",
-    image: "/RepoLens.png",
-    stack: "REACTJS | NODEJS | EXPRESSJS | TAILWIND CSS | VITE ",
-    link: "https://repo-lens-zeta.vercel.app/",
-  },
-  {
-    title: "DesignSync",
-    description:
-      "A clean control centre for design delivery. DesignSync is a design handoff tool that streamlines the process of delivering design assets and specifications to development teams, ensuring a smooth transition from design to code.",
-    image: "/DesignSync.png",
-    stack:
-      "REACT | NODEJS | EXPRESS | TAILWIND CSS | MONGODB | CLODINARY | VITE | SOCKET.IO",
-    link: "https://outlaw-seven.vercel.app/",
-  },
-  {
-    title: "3D DEVELOPERS PORTFOLIO",
-    description:
-      "Built a fully responsive 3D portfolio website featuring interactive animations, smooth camera transitions, dynamic project showcases, and optimized performance to create an engaging user experience while highlighting technical projects and skills.",
-    stack:
-      "JAVASCRIPT | REACT | FRAMER MOTION | TAILWIND CSS | VITE",
-    image: "/Portfolio.png",
-    link: "https://omkarnikams-portfolio.netlify.app/",
-  },
-  {
-    title: "",
-    description:
-      "",
-    stack:
-      "",
-    image: "",
-    link: "",
-  },
-  
-    
-];
+import useProjects from "../hooks/useProjects";
 
 // Animation variants for cards
 const cardVariants = {
@@ -54,6 +14,8 @@ const cardVariants = {
 };
 
 const Projects = () => {
+  const projects = useProjects();
+
   return (
     <div className="max-w-7xl mx-auto p-4 my-12 h-auto">
       {/* Section Heading */}
