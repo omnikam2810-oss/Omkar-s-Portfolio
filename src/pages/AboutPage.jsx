@@ -16,6 +16,7 @@ const fadeUp = {
 };
 
 const tagline = "A Wizard of Code, Turning Concepts into Magical Solutions.";
+const highlightedTaglineStart = tagline.indexOf("Magical Solutions");
 
 const typewriterContainer = {
   hidden: {},
@@ -204,7 +205,9 @@ const AboutPage = () => {
           {tagline.split("").map((character, index) => (
             <motion.span
               key={`${character}-${index}`}
-              className="inline-block"
+              className={`inline-block ${
+                index >= highlightedTaglineStart ? "text-green-300" : ""
+              }`}
               variants={typewriterCharacter}
             >
               {character === " " ? "\u00A0" : character}
