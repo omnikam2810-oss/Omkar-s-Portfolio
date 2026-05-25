@@ -15,6 +15,23 @@ const fadeUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
 
+const tagline = "A Wizard of Code, Turning Concepts into Magical Solutions.";
+
+const typewriterContainer = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.045,
+      delayChildren: 0.25,
+    },
+  },
+};
+
+const typewriterCharacter = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1 },
+};
+
 const AboutPage = () => {
   return (
     <section>
@@ -177,12 +194,23 @@ const AboutPage = () => {
       {/* Tagline */}
       <motion.h1
         className="text-3xl font-bold px-12 mb-5 text-center"
-        variants={fadeUp}
+        variants={typewriterContainer}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
+        aria-label={tagline}
       >
-        A Wizard of Code, Turning Concepts into Magical Solutions.
+        <span aria-hidden="true">
+          {tagline.split("").map((character, index) => (
+            <motion.span
+              key={`${character}-${index}`}
+              className="inline-block"
+              variants={typewriterCharacter}
+            >
+              {character === " " ? "\u00A0" : character}
+            </motion.span>
+          ))}
+        </span>
       </motion.h1>
 
       {/* Info Cards */}
