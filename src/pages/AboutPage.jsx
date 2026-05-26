@@ -163,12 +163,12 @@ const AboutPage = () => {
         viewport={{ once: true, amount: 0.2 }}
       >
         <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5 rounded-xl border-2 border-gray-800 bg-black p-6 shadow-lg shadow-green-900/10">
-          <div className="shrink-0 rounded-full">
+          <div className="shrink-0 rounded-full bg-white">
             <div className="rounded-full">
               <img
-                src="/drdo.png"
+                src="/drdo.svg"
                 alt="Internship profile"
-                className="h-24 w-24 rounded-full object-cover"
+                className="h-24 w-24 rounded-full object-contain"
               />
             </div>
           </div>
