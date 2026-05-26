@@ -13,11 +13,10 @@ const About = () => {
             About Me
           </h1>
           <p className="text-base sm:text-lg leading-relaxed text-gray-300">
-            Hi, I'm Omkar! I'm a passionate developer with a love for building clean, efficient, and aesthetically pleasing web applications.  
-            I enjoy working on full-stack projects and exploring new technologies that make my work both creative and meaningful.
+            Hi, I’m Omkar — a passionate Full Stack Developer dedicated to building modern, efficient, and visually refined web applications. I enjoy creating seamless digital experiences by combining clean design principles with scalable backend architecture. Continuously exploring new technologies and development practices allows me to build solutions that are both innovative and impactful.
           </p>
           <p className="text-base sm:text-lg leading-relaxed text-gray-300">
-            Currently, I am working as an Intern at DRDO, where I am gaining practical experience in software development and real-world problem solving.
+            Currently, I am working as a Full Stack Developer Intern at DRDO, where I am gaining practical experience in software development and real-world problem solving.
           </p>
           <p className="text-base sm:text-lg leading-relaxed text-gray-300">
             Exploring Data Structures & Algorithms, problem-solving techniques, and scalable software engineering while continuously strengthening my skills as a full-stack developer and building efficient, real-world applications.
