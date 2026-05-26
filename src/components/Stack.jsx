@@ -10,19 +10,23 @@ import {
   SiHtml5,
   SiCss3,
   SiTypescript,
+  SiNextdotjs,
+  SiPostgresql,
 } from "react-icons/si";
 
 const techStack = [
+  { name: "Python", icon: <SiPython /> },
   { name: "React", icon: <FaReact /> },
+  { name: "Next.js", icon: <SiNextdotjs /> },
   { name: "Node.js", icon: <FaNodeJs /> },
   { name: "Express", icon: <SiExpress /> },
   { name: "MongoDB", icon: <SiMongodb /> },
+  { name: "PostgreSQL", icon: <SiPostgresql /> },
   { name: "JavaScript", icon: <SiJavascript /> },
   { name: "TypeScript", icon: <SiTypescript /> },
   { name: "HTML", icon: <SiHtml5 /> },
   { name: "CSS", icon: <SiCss3 /> },
   { name: "SQL", icon: <SiMysql /> },
-  { name: "Python", icon: <SiPython /> },
   { name: "TailwindCSS", icon: <SiTailwindcss /> },
 ];
 

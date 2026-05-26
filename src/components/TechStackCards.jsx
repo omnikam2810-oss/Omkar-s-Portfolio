@@ -7,13 +7,17 @@ import {
   SiHtml5,
   SiCss3,
   SiJavascript,
+  SiNextdotjs,
+  SiPostgresql,
 } from "react-icons/si";
 
 const techStack = [
   { name: "React", icon: <FaReact size={32} />, color: "rgb(97,218,251)" },
+  { name: "Next.js", icon: <SiNextdotjs size={32} />, color: "rgb(255,255,255)" },
   { name: "Node.js", icon: <FaNodeJs size={32} />, color: "rgb(83,181,72)" },
   { name: "MongoDB", icon: <SiMongodb size={32} />, color: "rgb(0,128,0)" },
   { name: "Express", icon: <SiExpress size={32} />, color: "rgb(111,111,111)" },
+  { name: "PostgreSQL", icon: <SiPostgresql size={32} />, color: "rgb(51,103,145)" },
   { name: "Tailwind CSS", icon: <SiTailwindcss size={32} />, color: "rgb(56,189,248)" },
   { name: "HTML5", icon: <SiHtml5 size={32} />, color: "rgb(227,76,38)" },
   { name: "CSS3", icon: <SiCss3 size={32} />, color: "rgb(38,77,228)" },
@@ -64,7 +68,7 @@ const TechStackCards = () => {
             transform: perspective(var(--perspective)) rotateX(var(--rotateX)) rotateY(0);
           }
           to {
-            transform: perspective(var(--perspective)) rotateX(var(--rotateX)) rotateY(360deg);
+            transform: perspective(var(--perspective)) rotateX(var(--rotateX)) rotateY(-360deg);
           }
         }
       `}</style>
