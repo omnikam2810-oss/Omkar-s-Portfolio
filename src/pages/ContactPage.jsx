@@ -55,7 +55,7 @@ const ContactPage = () => {
   };
 
   return (
-    <section className="w-full bg-black text-white py-12 px-4 sm:px-6 md:px-12 lg:px-20">
+    <section id="contact" className="w-full bg-black text-white py-12 px-4 sm:px-6 md:px-12 lg:px-20 scroll-mt-24">
       <ToastContainer />
       <div className="max-w-3xl mx-auto">
         {/* Heading */}
@@ -69,17 +69,6 @@ const ContactPage = () => {
         >
           Get in touch
         </motion.h2>
-
-        <motion.p
-          className="text-base sm:text-lg md:text-xl mt-4 font-light italic text-center md:text-left"
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          custom={1}
-        >
-          Open for Internships & full-time roles
-        </motion.p>
 
         {/* Form */}
         <motion.form

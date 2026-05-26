@@ -1,9 +1,19 @@
 import { ArrowUpRight } from "lucide-react";
 import React from "react";
-import { NavLink } from "react-router-dom";
 import { TypeAnimation } from "react-type-animation";
 
 const Home = () => {
+  const scrollToContact = (event) => {
+    event.preventDefault();
+
+    document.getElementById("contact")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+
+    window.history.pushState(null, "", "#contact");
+  };
+
   return (
     <section className="flex flex-col items-center justify-center text-center pt-32 pb-12 px-6 overflow-x-hidden">
       {/* Subtitle */}
@@ -33,12 +43,13 @@ const Home = () => {
       </p>
 
       {/* Button */}
-      <NavLink
-        to="/contact"
+      <a
+        href="#contact"
+        onClick={scrollToContact}
         className="bg-white text-black px-8 py-3 flex gap-2 rounded-full font-medium hover:bg-gray-200 transition"
       >
         Get in touch <ArrowUpRight />
-      </NavLink>
+      </a>
     </section>
   );
 };

@@ -1,16 +1,17 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { NAV_LINKS } from "../constants/navigation";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { pathname, hash } = useLocation();
 
-  const navLinks = [
-    { name: "About", to: "/about" },
-    { name: "Projects", to: "/projects" },
-    { name: "Get in touch", to: "/contact" },
-  ];
+  const getHashLinkClass = (to) =>
+    pathname === "/" && hash === to.replace("/", "")
+      ? "text-white font-semibold"
+      : "hover:text-gray-400 transition";
 
   return (
     <header className="flex mx-12 justify-between items-center px-6 py-4 md:px-12 border-b border-gray-700 relative">
@@ -22,18 +23,11 @@ const Header = () => {
       {/* Desktop Navigation */}
       <nav className="hidden md:block">
         <ul className="flex items-center space-x-8 text-sm font-medium">
-          {navLinks.map((link) => (
+          {NAV_LINKS.map((link) => (
             <li key={link.to}>
-              <NavLink
-                to={link.to}
-                className={({ isActive }) =>
-                  isActive
-                    ? "text-white font-semibold"
-                    : "hover:text-gray-400 transition"
-                }
-              >
+              <Link to={link.to} className={getHashLinkClass(link.to)}>
                 {link.name}
-              </NavLink>
+              </Link>
             </li>
           ))}
         </ul>
@@ -58,19 +52,15 @@ const Header = () => {
             className="absolute top-full left-0 w-full bg-black border-t border-gray-700 md:hidden"
           >
             <ul className="flex flex-col items-center space-y-6 py-6 text-sm font-medium">
-              {navLinks.map((link) => (
+              {NAV_LINKS.map((link) => (
                 <li key={link.to}>
-                  <NavLink
+                  <Link
                     to={link.to}
-                    onClick={() => setIsOpen(false)} // close on click
-                    className={({ isActive }) =>
-                      isActive
-                        ? "text-white font-semibold"
-                        : "hover:text-gray-400 transition"
-                    }
+                    onClick={() => setIsOpen(false)}
+                    className={getHashLinkClass(link.to)}
                   >
                     {link.name}
-                  </NavLink>
+                  </Link>
                 </li>
               ))}
             </ul>

@@ -2,8 +2,9 @@ import React from "react";
 import Home from "../components/Home";
 import Stack from "../components/Stack";
 import About from "../components/About";
-import ProjectCarousel from "../components/ProjectCarousel";
+import AboutPage from "./AboutPage";
 import ContactSection from "../components/ContactSection";
+import ContactPage from "./ContactPage";
 import { motion } from "framer-motion";
 
 const fadeUp = {
@@ -46,7 +47,7 @@ const HomePage = () => {
         <About />
       </motion.section>
 
-      {/* Projects */}
+      {/* About Details */}
       <motion.section
         variants={fadeUp}
         initial="hidden"
@@ -54,10 +55,10 @@ const HomePage = () => {
         viewport={{ once: true }}
         custom={3}
       >
-        <ProjectCarousel />
+        <AboutPage />
       </motion.section>
 
-      {/* Contact */}
+      {/* Contact CTA */}
       <motion.section
         variants={fadeUp}
         initial="hidden"
@@ -66,6 +67,17 @@ const HomePage = () => {
         custom={4}
       >
         <ContactSection />
+      </motion.section>
+
+      {/* Contact Form */}
+      <motion.section
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        custom={5}
+      >
+        <ContactPage />
       </motion.section>
     </main>
   );

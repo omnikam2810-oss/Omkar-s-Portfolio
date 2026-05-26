@@ -17,7 +17,7 @@ const Projects = () => {
   const projects = useProjects();
 
   return (
-    <div className="max-w-7xl mx-auto p-4 my-12 h-auto">
+    <section id="projects" className="max-w-7xl mx-auto p-4 my-12 h-auto scroll-mt-24">
       {/* Section Heading */}
       <motion.h2
         className="text-4xl text-gray-300 text-center font-bold mb-10"
@@ -78,7 +78,7 @@ const Projects = () => {
           </motion.div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

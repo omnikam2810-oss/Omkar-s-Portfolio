@@ -1,9 +1,19 @@
 import React from "react";
 import { ArrowUpRight, Handshake } from "lucide-react";
 import { motion } from "framer-motion";
-import { NavLink } from "react-router-dom";
 
 const ContactSection = () => {
+  const scrollToContact = (event) => {
+    event.preventDefault();
+
+    document.getElementById("contact")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+
+    window.history.pushState(null, "", "#contact");
+  };
+
   return (
     <section className="bg-black text-white w-full py-20 px-6 md:px-20">
       <div className="max-w-4xl mx-auto">
@@ -27,12 +37,13 @@ const ContactSection = () => {
 
             {/* Button */}
           </div>
-          <NavLink
-            to="/contact"
+          <a
+            href="#contact"
+            onClick={scrollToContact}
             className="w-auto flex gap-2 mt-10 px-8 py-4 border text-center border-white rounded-full text-lg font-medium hover:bg-white hover:text-black transition"
           >
             Get in touch <ArrowUpRight />
-          </NavLink>
+          </a>
         </div>
       </div>
     </section>

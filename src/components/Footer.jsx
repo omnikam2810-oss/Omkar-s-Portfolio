@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Check, Copy, Github, Linkedin, Mail } from "lucide-react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { NAV_LINKS } from "../constants/navigation";
 
 const Footer = () => {
   const email = "omnikam2810@gmail.com";
@@ -19,60 +20,17 @@ const Footer = () => {
   return (
     <footer className="border-t border-gray-700 px-8 py-6 mx-12 mt-12">
       <div className="grid grid-cols-1 items-center gap-6 md:grid-cols-3">
-        {/* Navigation */}
-         <nav className="flex justify-center md:justify-start">
-        <ul className="flex items-center space-x-8 text-sm font-medium">
-          <li>
-            <NavLink
-              to="/about"
-              className={({ isActive }) =>
-                isActive
-                  ? "text-white font-semibold"
-                  : "hover:text-gray-400 transition"
-              }
-            >
-              About
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/projects"
-              className={({ isActive }) =>
-                isActive
-                  ? "text-white font-semibold"
-                  : "hover:text-gray-400 transition"
-              }
-            >
-              Projects
-            </NavLink>
-          </li>
-          {/* <li>
-            <NavLink
-              to="/artboard"
-              className={({ isActive }) =>
-                isActive
-                  ? "text-white font-semibold"
-                  : "hover:text-gray-400 transition"
-              }
-            >
-              Artboard
-            </NavLink>
-          </li> */}
-          <li>
-            <NavLink
-              to="/contact"
-              className={({ isActive }) =>
-                isActive
-                  ? "text-white font-semibold"
-                  : "hover:text-gray-400 transition"
-              }
-            >
-              Get in touch
-            </NavLink>
-          </li>
-        
-        </ul>
-      </nav>
+        <nav className="flex justify-center md:justify-start">
+          <ul className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm font-medium md:justify-start">
+            {NAV_LINKS.map((link) => (
+              <li key={link.to}>
+                <Link to={link.to} className="hover:text-gray-400 transition">
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
 
         <div className="flex items-center justify-center gap-2 text-sm text-gray-400">
           <a href={`mailto:${email}`} className="hover:text-white transition">

@@ -1,10 +1,8 @@
-import { ArrowUpRight } from 'lucide-react';
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 
 const About = () => {
   return (
-    <section className="bg-black text-white min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12">
+    <section id="about" className="bg-black text-white min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12">
       <div className="max-w-6xl w-full flex flex-col md:flex-row items-center gap-8 md:gap-12 lg:gap-16">
         
         {/* Left: Text content */}
@@ -21,15 +19,6 @@ const About = () => {
           <p className="text-base sm:text-lg leading-relaxed text-gray-300">
             Exploring Data Structures & Algorithms, problem-solving techniques, and scalable software engineering while continuously strengthening my skills as a full-stack developer and building efficient, real-world applications.
           </p>
-          
-          <div className="mt-6 w-full md:w-3/4 lg:w-1/2">
-            <NavLink
-              to="/about"
-              className="px-4 sm:px-6 py-3 h-12 rounded-full border flex justify-center items-center gap-2 sm:gap-4 border-white hover:bg-white hover:text-black transition"
-            >
-              More About Me <ArrowUpRight size={18} className="sm:size-auto" />
-            </NavLink>
-          </div>
         </div>
 
         {/* Right: SVG image */}
