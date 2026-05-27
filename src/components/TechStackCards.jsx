@@ -20,7 +20,7 @@ const techStack = [
   { name: "PostgreSQL", icon: <SiPostgresql size={26} />, color: "rgb(51,103,145)" },
   { name: "Tailwind CSS", icon: <SiTailwindcss size={26} />, color: "rgb(56,189,248)" },
   { name: "HTML5", icon: <SiHtml5 size={26} />, color: "rgb(227,76,38)" },
-  { name: "CSS3", icon: <SiCss3 size={26} />, color: "rgb(38,77,228)" },
+  { name: "CSS", icon: <SiCss3 size={26} />, color: "rgb(38,77,228)" },
   { name: "JavaScript", icon: <SiJavascript size={26} />, color: "rgb(240,219,79)" },
   { name: "Git", icon: <FaGitAlt size={26} />, color: "rgb(240,80,51)" },
 ];
