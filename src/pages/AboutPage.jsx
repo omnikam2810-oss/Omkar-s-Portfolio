@@ -250,7 +250,7 @@ const AboutPage = () => {
           <div className="group p-6 rounded-xl shadow-lg hover:shadow-2xl transition-transform duration-300 cursor-pointer">
             {expertiseItems.map((item, index) => (
               <div key={item.title}>
-                <h3 className="text-xl font-semibold text-green-400 mb-2 flex items-center gap-2">
+                <h3 className="text-xl font-semibold text-green-300 mb-2 flex items-center gap-2">
                   {item.icon} {item.title}
                 </h3>
                 <p
