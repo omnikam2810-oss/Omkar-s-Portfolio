@@ -17,7 +17,7 @@ const Home = () => {
   return (
     <section className="flex flex-col items-center justify-center text-center pt-32 pb-12 px-6 overflow-x-hidden">
       {/* Subtitle */}
-      <p className="text-green-500 text-sm tracking-wider mb-3">
+      <p className="text-green-300 text-sm tracking-wider mb-3">
         ● CURRENTLY INTERN AT DRDO
       </p>
 
