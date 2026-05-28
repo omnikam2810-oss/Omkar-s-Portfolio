@@ -30,7 +30,7 @@ const Projects = () => {
       </motion.h2>
 
       {/* Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
         {projects.map((project, index) => (
           <motion.div
             key={index}
@@ -43,7 +43,7 @@ const Projects = () => {
           >
             <div className="flip-card-inner">
               {/* Front */}
-              <div className="flip-card-front">
+              <div className="flip-card-front rounded-xl border-2 border-gray-800 overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
