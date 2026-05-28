@@ -43,7 +43,7 @@ const Projects = () => {
           >
             <div className="flip-card-inner">
               {/* Front */}
-              <div className="flip-card-front rounded-xl border-2 border-gray-800 overflow-hidden">
+              <div className="flip-card-front rounded-xl border border-white overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
